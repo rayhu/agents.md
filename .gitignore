@@ -1,0 +1,34 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node (future Rocky app, benchmark tooling)
+node_modules/
+.next/
+.vercel/
+.eve/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Local agent state (settings.json and hooks are shared; local overrides are not)
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Generated output and benchmark run artifacts
+out/
+bench/runs/
+bench/workspaces/
+
+# Editors
+.idea/
+*.swp

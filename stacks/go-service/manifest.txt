@@ -1,0 +1,13 @@
+AGENTS.md: routing.md base layers/backend-go-api languages/go
+CLAUDE.md: ../shared/claude-import.md
+db/migrations/AGENTS.md: layers/database-postgres
+docs/agent-rules/security.md: concerns/security
+docs/agent-rules/testing.md: concerns/testing
+docs/agent-rules/dependencies.md: concerns/dependencies
+docs/agent-rules/observability.md: concerns/observability
+docs/agent-tasks/feature.md: tasks/feature
+docs/agent-tasks/bugfix.md: tasks/bugfix
+docs/agent-tasks/refactor.md: tasks/refactor
+docs/agent-tasks/code-review.md: tasks/code-review
+docs/agent-tasks/dependency-upgrade.md: tasks/dependency-upgrade
+docs/agent-tasks/db-migration.md: tasks/db-migration

@@ -1,0 +1,25 @@
+version: "2"
+linters:
+  default: none
+  enable:
+    - errcheck      # no ignored errors
+    - govet
+    - staticcheck
+    - unused
+    - ineffassign
+    - errorlint     # errors.Is / errors.As, %w wrapping
+    - wrapcheck     # wrap errors crossing package boundaries
+    - contextcheck  # propagate context
+    - noctx         # http requests need a context
+    - gosec
+    - bodyclose
+    - sqlclosecheck
+    - rowserrcheck
+    - forbidigo
+  settings:
+    forbidigo:
+      forbid:
+        - pattern: ^panic$
+          msg: return an error instead of panicking
+        - pattern: ^context\.Background$
+          msg: propagate the caller's context

@@ -1,0 +1,30 @@
+# Snippet: merge into your pyproject.toml.
+[tool.pyright]
+typeCheckingMode = "strict"
+reportUnknownMemberType = "error"
+reportUnknownVariableType = "error"
+reportMissingTypeStubs = "warning"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+  "E", "F", "W", "I", "UP", "B", "C4", "SIM", "RUF",
+  "ANN",   # complete annotations
+  "ANN401",# no typing.Any
+  "S",     # security
+  "DTZ",   # timezone-aware datetimes only
+  "BLE",   # no blind except
+  "PT",    # pytest style
+  "TID",   # tidy imports
+  "T20",   # no print
+]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101", "ANN"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"

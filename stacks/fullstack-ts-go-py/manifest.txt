@@ -1,0 +1,19 @@
+# Root is a map: architecture, invariants, universal rules. Layer rules live next to the code.
+# Cross-cutting concerns and task workflows are pulled in on demand, not always loaded.
+AGENTS.md: architecture.md base
+CLAUDE.md: ../shared/claude-import.md
+apps/web/AGENTS.md: layers/frontend-react-vite languages/typescript
+services/api/AGENTS.md: layers/backend-go-api languages/go
+services/ai/AGENTS.md: layers/ai-service-python languages/python-strict concerns/llm-and-agents
+contracts/AGENTS.md: layers/api-contracts
+db/migrations/AGENTS.md: layers/database-postgres
+docs/agent-rules/security.md: concerns/security
+docs/agent-rules/testing.md: concerns/testing
+docs/agent-rules/dependencies.md: concerns/dependencies
+docs/agent-rules/observability.md: concerns/observability
+docs/agent-tasks/feature.md: tasks/feature
+docs/agent-tasks/bugfix.md: tasks/bugfix
+docs/agent-tasks/refactor.md: tasks/refactor
+docs/agent-tasks/code-review.md: tasks/code-review
+docs/agent-tasks/dependency-upgrade.md: tasks/dependency-upgrade
+docs/agent-tasks/db-migration.md: tasks/db-migration
